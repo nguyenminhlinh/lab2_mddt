@@ -1,7 +1,7 @@
-
-**** 10/29/22 16:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
 
- ** Profile: "SCHEMATIC1-lab1"  [ D:\MDDT\LAB2\lab1-PSpiceFiles\SCHEMATIC1\lab1.sim ] 
+**** 10/29/22 20:45:10 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-lab1"  [ D:\MDDT\LAB2\lab1-pspicefiles\schematic1\lab1.sim ] 
 
 
  ****     CIRCUIT DESCRIPTION
@@ -32,19 +32,18 @@
 
 **** INCLUDING SCHEMATIC1.net ****
 * source LAB1
-R_R1         N00526 N00521  2k TC=0,0 
-V_V1         N00521 0 12Vdc
-D_D1         N00526 N00564 Dbreak 
-R_R2         0 N00526  8k TC=0,0 
-R_R3         N00564 N00521  4k TC=0,0 
-R_R4         0 N00564  6k TC=0,0 
+R_R1         N01246 0  5.6k TC=0,0 
+V_V1         N01221 0 12Vdc
+D_D1         N01221 N01228 Dbreak 
+R_R2         N01228 N01246  3.3k TC=0,0 
+D_D2         N01228 N01246 Dbreak 
 
 **** RESUMING lab1.cir ****
 .END
 
-**** 10/29/22 16:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+**** 10/29/22 20:45:10 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
 
- ** Profile: "SCHEMATIC1-lab1"  [ D:\MDDT\LAB2\lab1-PSpiceFiles\SCHEMATIC1\lab1.sim ] 
+ ** Profile: "SCHEMATIC1-lab1"  [ D:\MDDT\LAB2\lab1-pspicefiles\schematic1\lab1.sim ] 
 
 
  ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
@@ -57,7 +56,7 @@ R_R4         0 N00564  6k TC=0,0
  NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
 
 
-(N00521)   12.0000 (N00526)    8.8936 (N00564)    8.2596 
+(N01221)   12.0000 (N01228)   11.3280 (N01246)   10.6590 
 
 
 
@@ -65,17 +64,17 @@ R_R4         0 N00564  6k TC=0,0
     VOLTAGE SOURCE CURRENTS
     NAME         CURRENT
 
-    V_V1        -2.488E-03
+    V_V1        -1.903E-03
 
-    TOTAL POWER DISSIPATION   2.99E-02  WATTS
+    TOTAL POWER DISSIPATION   2.28E-02  WATTS
 
 
 
           JOB CONCLUDED
 
-**** 10/29/22 16:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+**** 10/29/22 20:45:10 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
 
- ** Profile: "SCHEMATIC1-lab1"  [ D:\MDDT\LAB2\lab1-PSpiceFiles\SCHEMATIC1\lab1.sim ] 
+ ** Profile: "SCHEMATIC1-lab1"  [ D:\MDDT\LAB2\lab1-pspicefiles\schematic1\lab1.sim ] 
 
 
  ****     JOB STATISTICS SUMMARY
@@ -85,6 +84,5 @@ R_R4         0 N00564  6k TC=0,0
 
 
 
-  License check-out time            =       22.75
-  Total job time (using Solver 1)   =         .22
+  Total job time (using Solver 1)   =         .45
 

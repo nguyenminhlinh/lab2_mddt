@@ -1,0 +1,4 @@
+* source LAB1
+R_R1         N00124 N00131  220 TC=0,0 
+V_V1         N00124 0 5Vdc
+D_D1         N00131 0 Dbreak 

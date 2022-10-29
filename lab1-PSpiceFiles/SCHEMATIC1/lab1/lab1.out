@@ -1,5 +1,5 @@
 
-**** 10/30/22 00:04:19 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+**** 10/30/22 00:29:40 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
 
  ** Profile: "SCHEMATIC1-lab1"  [ D:\MDDT\LAB2\lab1-pspicefiles\schematic1\lab1.sim ] 
 
@@ -24,9 +24,13 @@
 .lib "nom.lib" 
 
 *Analysis directives: 
-.TRAN  0 200ms 0 0.2ms 
+.TRAN  0 10ms 0 1ms 
 .OPTIONS ADVCONV
 .OPTIONS FILEMODELSEARCH
+.OPTIONS ABSTOL= 0.001
+.OPTIONS CHGTOL= 0.001
+.OPTIONS GMIN= 1.0E-9
+.OPTIONS VNTOL= 0.001
 .PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
 .INC "..\SCHEMATIC1.net" 
 
@@ -39,16 +43,129 @@ V_V3         N02403 0  AC 1
 X1_TX1         N02403 0  N02309 N02317 ST_Model
 D_D1         0 N02309 Dbreak 
 D_D2         0 N02317 Dbreak 
-D_D3         N02309 N02305 Dbreak 
-D_D4         N02317 N02305 Dbreak 
-R_R1         0 N02305  1k TC=0,0 
-C_C1         0 N02305  680uF  TC=0,0 
-X_D5         0 N02305 Zener_parameterized PARAMS: VZT=20 RSF=100m
+D_D3         N02309 N02321 Dbreak 
+D_D4         N02317 N02321 Dbreak 
+C_C1         0 N02321  680uF  TC=0,0 
+X_U1         N02321 N03396 N03788 0 0 LM2596_5P0_TRANS
+C_C2         0 N03396  220uF  TC=0,0 
+R_R1         0 N03396  1k TC=0,0 
+L_L1         N03788 N03396  33uH  
+X_D5         0 N03396 Zener_parameterized PARAMS: VZT=5 RSF=100m
 
 **** RESUMING lab1.cir ****
 .END
 
-**** 10/30/22 00:04:19 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+**** 10/30/22 00:29:40 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-lab1"  [ D:\MDDT\LAB2\lab1-pspicefiles\schematic1\lab1.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.X_U2_U20.dd1 
+          IS    1.000000E-15 
+           N     .1          
+          RS     .05         
+          TT   10.000000E-12 
+
+
+               X_U1.X_U2_U21.dd1 
+          IS    1.000000E-15 
+           N     .1          
+          RS     .05         
+          TT   10.000000E-12 
+
+
+               X_U1.X_U2_U22.dd1 
+          IS    1.000000E-15 
+           N     .1          
+          RS     .05         
+          TT   10.000000E-12 
+
+
+               X_U1.X_U1_U20.dd1 
+          IS    1.000000E-15 
+           N     .1          
+          RS     .05         
+          TT   10.000000E-12 
+
+
+               X_U1.X_U1_U17.dd1 
+          IS    1.000000E-15 
+           N     .1          
+          RS     .05         
+          TT   10.000000E-12 
+
+
+               X_U1.X_U1_U18.dd1 
+          IS    1.000000E-15 
+           N     .1          
+          RS     .05         
+          TT   10.000000E-12 
+
+
+               X_U1.X_U1_U19.dd1 
+          IS    1.000000E-15 
+           N     .1          
+          RS     .05         
+          TT   10.000000E-12 
+
+
+               X_U1.X_U1_U21.d_d1 
+          IS    1.000000E-15 
+           N     .1          
+          RS     .05         
+          TT   10.000000E-12 
+
+
+**** 10/30/22 00:29:40 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-lab1"  [ D:\MDDT\LAB2\lab1-pspicefiles\schematic1\lab1.sim ] 
+
+
+ ****     Voltage Controlled Switch MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.X_U2_S1._U2_S1 
+         RON    1.000000E-06 
+        ROFF    1.000000E+06 
+         VON    1            
+        VOFF    0            
+
+
+               X_U1.X_U1_S1._U1_S1 
+         RON     .125        
+        ROFF    1.000000E+06 
+         VON     .8          
+        VOFF     .2          
+
+
+               X_U1.X_U1_S4._U1_S4 
+         RON   10.000000E-06 
+        ROFF    1.000000E+06 
+         VON     .8          
+        VOFF     .2          
+
+
+               X_U1.X_U1_S3._U1_S3 
+         RON    1.000000E-03 
+        ROFF   10.000000E+06 
+         VON     .2          
+        VOFF     .8          
+
+
+**** 10/30/22 00:29:40 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
 
  ** Profile: "SCHEMATIC1-lab1"  [ D:\MDDT\LAB2\lab1-pspicefiles\schematic1\lab1.sim ] 
 
@@ -63,11 +180,69 @@ X_D5         0 N02305 Zener_parameterized PARAMS: VZT=20 RSF=100m
  NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
 
 
-(N02305) 19.38E-09 (N02309) 53.44E-12 (N02317) 53.44E-12 (N02403)    0.0000     
+(N02309) 1.598E-06 (N02317) 1.598E-06 (N02321) 3.995E-06 (N02403)    0.0000     
 
-(X_D5.1)  -19.5050 (X_D5.3)   19.5050 (X_D5.9)-53.75E-15 (X1_TX1.PI)    0.0000  
+(N03396) 4.004E-06 (N03788) 4.004E-06 (X_D5.1)   -4.5047 (X_D5.3)    4.5047     
 
-(X1_TX1.SI) 53.44E-12                 (X1_TX1.SI1) 53.44E-12                
+(X_D5.9)-12.41E-12 (X1_TX1.PI)    0.0000                 (X1_TX1.SI) 1.598E-06  
+
+(X1_TX1.SI1) 1.598E-06                (X_U1.U1_QB)    1.0000                    
+
+(X_U1.FB_INT) 988.1E-09               (X_U1.U1_CLK)-3.248E-15                   
+
+(X_U1.U1_VIN) 3.995E-06               (X_U1.U1_RAMP)     .0020                  
+
+(X_U1.U1_VREF)    0.0000              (X_U1.U1_VREG) 3.992E-09                  
+
+(X_U1.U1_IN_EN)    1.0000             (X_U1.N16780142)    0.0000                
+
+(X_U1.N16780145)    0.0000            (X_U1.N16780152)    0.0000                
+
+(X_U1.N16780168) 3.995E-06            (X_U1.U1_N16912605) 988.1E-09             
+
+(X_U1.U1_N16912628)    1.2500         (X_U1.U1_N16912717)    0.0000             
+
+(X_U1.U1_N16912781)    0.0000         (X_U1.U1_N16912860)    0.0000             
+
+(X_U1.U1_N16912864)    0.0000         (X_U1.U1_N16912941)    2.4000             
+
+(X_U1.U1_N16913023)     .6000         (X_U1.U1_N16913047)    0.0000             
+
+(X_U1.U1_N16913100)    1.0000         (X_U1.U1_N16913159)    0.0000             
+
+(X_U1.U1_N16913162) 3.995E-06         (X_U1.U1_N16913254)     .7500             
+
+(X_U1.U2_N16797288) 3.995E-06         (X_U1.U2_N16797354)-53.25E-15             
+
+(X_U1.U2_N16797356)    0.0000         (X_U1.U2_N16797358) 3.995E-06             
+
+(X_U1.U2_N16797432)    -.2200         (X_U1.U2_N16797445)    -.2000             
+
+(X_U1.U2_N16797477)    0.0000         (X_U1.U2_N16797480)    0.0000             
+
+(X_U1.U2_N16797484)-53.25E-15         (X_U1.U2_N16797488)    0.0000             
+
+(X_U1.U2_N16797592)     .0020         (X_U1.U2_N16797620)    0.0000             
+
+(X_U1.U2_N16797700)    2.0000         (X_U1.X_U1_U21.my5)    1.0000             
+
+(X_U1.X_U1_U21.qbr)    1.0000         (X_U1.X_U1_U21.qqq)    -.0100             
+
+(X_U1.X_U1_U8.Yint)    1.0000         (X_U1.X_U2_U8.Yint)    0.0000             
+
+(X_U1.X_U2_U9.Yint)    0.0000         (X_U1.U1_N169126890) 539.9E-21            
+
+(X_U1.U1_N169128072)    0.0000        (X_U1.U1_N169131443)    1.0000            
+
+(X_U1.U2_N167976151)    0.0000        (X_U1.X_U1_U12.Yint)    1.0000            
+
+(X_U1.X_U1_U15.YINT)    1.0000        (X_U1.X_U1_U16.Yint)    0.0000            
+
+(X_U1.X_U1_U21.qint)    -.0100        (X_U1.X_U1_U21.myvss)    0.0000           
+
+(X_U1.X_U1_U21.qqqd1)    0.0000       (X_U1.U1_ERROR_AMP_OUT) 4.049E-12         
+
+(X_U1.X_U1_U21.x3.YINT)    0.0000     
 
 
 
@@ -76,14 +251,24 @@ X_D5         0 N02305 Zener_parameterized PARAMS: VZT=20 RSF=100m
     NAME         CURRENT
 
     V_V3         0.000E+00
+    X_U1.V_U2_V3  -1.998E-09
+    X_U1.V_U2_V2   0.000E+00
+    X_U1.V_U2_V1   0.000E+00
+    X_U1.V_U1_VCL   3.491E-17
+    X_U1.V_U1_VCH  -2.400E-09
+    X_U1.V_U1_V_EN4   0.000E+00
+    X_U1.V_U1_V1  -7.480E-07
+    X_U1.V_U1_V3   0.000E+00
+    X_U1.X_U1_U21.v1  -1.010E-09
+    X_U1.X_U1_U21.v2  -1.005E-11
 
-    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+    TOTAL POWER DISSIPATION   5.72E-07  WATTS
 
 
 
           JOB CONCLUDED
 
-**** 10/30/22 00:04:19 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+**** 10/30/22 00:29:40 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
 
  ** Profile: "SCHEMATIC1-lab1"  [ D:\MDDT\LAB2\lab1-pspicefiles\schematic1\lab1.sim ] 
 
@@ -95,6 +280,6 @@ X_D5         0 N02305 Zener_parameterized PARAMS: VZT=20 RSF=100m
 
 
 
-  License check-out time            =        1.31
-  Total job time (using Solver 1)   =         .28
+  License check-out time            =       40.25
+  Total job time (using Solver 1)   =       10.38
 

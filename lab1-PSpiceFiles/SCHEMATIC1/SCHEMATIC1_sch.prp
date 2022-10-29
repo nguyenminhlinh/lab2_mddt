@@ -1,7 +1,7 @@
 ("FILE_TYPE"	"PMAP File"
     ("devices"
         ("R")
-        ("VDC")
+        ("VSIN")
         ("Dbreak")
     )
     ("instances"
@@ -15,7 +15,7 @@
                     ("pspice_param"	"VALUE")
                 )
                 ("BiasValue Power"
-                    ("value"	"20.29mW")
+                    ("value"	"0W")
                     ("pspice_param"	"BiasValue Power")
                 )
                 ("PSpice Model Type"
@@ -57,70 +57,64 @@
             )
         )
         ("V3"
-            ("device_name"	"VDC")
+            ("device_name"	"VSIN")
             ("pspice_path"	"V_V3")
             ("level"	"0")
             ("model_params"
-                ("DC"
-                    ("value"	"5Vdc")
-                    ("pspice_param"	"DC")
+                ("AC"
+                    ("value"	"1")
+                    ("pspice_param"	"AC")
                 )
                 ("BiasValue Power"
-                    ("value"	"-22.84mW")
+                    ("value"	"0W")
                     ("pspice_param"	"BiasValue Power")
+                )
+                ("VAMPL"
+                    ("value"	"22")
+                    ("pspice_param"	"VAMPL")
+                )
+                ("VOFF"
+                    ("value"	"0")
+                    ("pspice_param"	"VOFF")
+                )
+                ("FREQ"
+                    ("value"	"50")
+                    ("pspice_param"	"FREQ")
                 )
                 ("PSpice Model Type"
                     ("value"	"0011")
                     ("pspice_param"	"PSpice Model Type")
                 )
-            )
-        )
-        ("D3"
-            ("device_name"	"Dbreak")
-            ("pspice_path"	"D_D3")
-            ("level"	"0")
-            ("model_params"
-                ("BiasValue Power"
-                    ("value"	"1.279mW")
-                    ("pspice_param"	"BiasValue Power")
-                )
-                ("AREA"
-                    ("value"	"")
-                    ("pspice_param"	"AREA")
-                )
-            )
-        )
-        ("D4"
-            ("device_name"	"Dbreak")
-            ("pspice_path"	"D_D4")
-            ("level"	"0")
-            ("model_params"
-                ("BiasValue Power"
-                    ("value"	"1.138mW")
-                    ("pspice_param"	"BiasValue Power")
-                )
-                ("AREA"
-                    ("value"	"")
-                    ("pspice_param"	"AREA")
-                )
-            )
-        )
-        ("V2"
-            ("device_name"	"VDC")
-            ("pspice_path"	"V_V2")
-            ("level"	"0")
-            ("model_params"
                 ("DC"
-                    ("value"	"9Vdc")
+                    ("value"	"")
                     ("pspice_param"	"DC")
                 )
+                ("TD"
+                    ("value"	"0")
+                    ("pspice_param"	"TD")
+                )
+                ("DF"
+                    ("value"	"0")
+                    ("pspice_param"	"DF")
+                )
+                ("PHASE"
+                    ("value"	"0")
+                    ("pspice_param"	"PHASE")
+                )
+            )
+        )
+        ("D1"
+            ("device_name"	"Dbreak")
+            ("pspice_path"	"D_D1")
+            ("level"	"0")
+            ("model_params"
                 ("BiasValue Power"
-                    ("value"	"-22.84mW")
+                    ("value"	"0W")
                     ("pspice_param"	"BiasValue Power")
                 )
-                ("PSpice Model Type"
-                    ("value"	"0011")
-                    ("pspice_param"	"PSpice Model Type")
+                ("AREA"
+                    ("value"	"")
+                    ("pspice_param"	"AREA")
                 )
             )
         )

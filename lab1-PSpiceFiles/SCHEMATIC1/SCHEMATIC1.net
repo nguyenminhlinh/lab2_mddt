@@ -1,6 +1,6 @@
 * source LAB1
-R_R1         N01246 0  5.6k TC=0,0 
-V_V1         N01221 0 12Vdc
-D_D1         N01221 N01228 Dbreak 
-R_R2         N01228 N01246  3.3k TC=0,0 
-D_D2         N01228 N01246 Dbreak 
+R_R1         N01430 0  1k TC=0,0 
+V_V3         N01443 0 5Vdc
+D_D3         N01443 N01430 Dbreak 
+D_D4         N01423 N01430 Dbreak 
+V_V2         N01423 0 9Vdc

@@ -1,1 +1,3 @@
+ lib=D:\MDDT\LAB2\lab1-PSpiceFiles\PSpiceModelApps\PSpiceModelApps_Include.lib, offset=46, size=241
  lib=C:\cds_spb_home\cdssetup\pspTILibDir\drv8304.lib, offset=218617, size=320
+ lib=C:\Cadence\PSpiceTI\tools\PSpice\Library\breakout.lib, offset=33850, size=7379

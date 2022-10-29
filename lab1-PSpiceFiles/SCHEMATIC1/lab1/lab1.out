@@ -1,5 +1,5 @@
 
-**** 10/29/22 21:19:03 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+**** 10/30/22 00:04:19 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
 
  ** Profile: "SCHEMATIC1-lab1"  [ D:\MDDT\LAB2\lab1-pspicefiles\schematic1\lab1.sim ] 
 
@@ -18,12 +18,13 @@
 *Libraries: 
 * Profile Libraries :
 * Local Libraries :
+.LIB "../../../lab1-PSpiceFiles/PSpiceModelApps/PSpiceModelApps_Include.lib" 
 * From [PSPICE NETLIST] section of C:\cds_spb_home\cdssetup\OrCAD_PSpiceTIPSpice_Install\17.4.0\PSpice.ini file:
 .lib "nom_pspti.lib" 
 .lib "nom.lib" 
 
 *Analysis directives: 
-.TRAN  0 100ms 0 0.1ms 
+.TRAN  0 200ms 0 0.2ms 
 .OPTIONS ADVCONV
 .OPTIONS FILEMODELSEARCH
 .PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
@@ -33,15 +34,21 @@
 
 **** INCLUDING SCHEMATIC1.net ****
 * source LAB1
-R_R1         0 N01902  1k TC=0,0 
-V_V3         N01895 0  AC 1
-+SIN 0 22 50 0 0 0
-D_D1         N01895 N01902 Dbreak 
+V_V3         N02403 0  AC 1
++SIN 0 220 50 0 0 0
+X1_TX1         N02403 0  N02309 N02317 ST_Model
+D_D1         0 N02309 Dbreak 
+D_D2         0 N02317 Dbreak 
+D_D3         N02309 N02305 Dbreak 
+D_D4         N02317 N02305 Dbreak 
+R_R1         0 N02305  1k TC=0,0 
+C_C1         0 N02305  680uF  TC=0,0 
+X_D5         0 N02305 Zener_parameterized PARAMS: VZT=20 RSF=100m
 
 **** RESUMING lab1.cir ****
 .END
 
-**** 10/29/22 21:19:03 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+**** 10/30/22 00:04:19 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
 
  ** Profile: "SCHEMATIC1-lab1"  [ D:\MDDT\LAB2\lab1-pspicefiles\schematic1\lab1.sim ] 
 
@@ -56,7 +63,11 @@ D_D1         N01895 N01902 Dbreak
  NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
 
 
-(N01895)    0.0000 (N01902)-639.9E-30 
+(N02305) 19.38E-09 (N02309) 53.44E-12 (N02317) 53.44E-12 (N02403)    0.0000     
+
+(X_D5.1)  -19.5050 (X_D5.3)   19.5050 (X_D5.9)-53.75E-15 (X1_TX1.PI)    0.0000  
+
+(X1_TX1.SI) 53.44E-12                 (X1_TX1.SI1) 53.44E-12                
 
 
 
@@ -72,7 +83,7 @@ D_D1         N01895 N01902 Dbreak
 
           JOB CONCLUDED
 
-**** 10/29/22 21:19:03 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+**** 10/30/22 00:04:19 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
 
  ** Profile: "SCHEMATIC1-lab1"  [ D:\MDDT\LAB2\lab1-pspicefiles\schematic1\lab1.sim ] 
 
@@ -84,6 +95,6 @@ D_D1         N01895 N01902 Dbreak
 
 
 
-  License check-out time            =        1.95
+  License check-out time            =        1.31
   Total job time (using Solver 1)   =         .28
 

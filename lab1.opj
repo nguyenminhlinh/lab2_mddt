@@ -1,6 +1,6 @@
 (ExpressProject "lab1"
   (ProjectVersion "19981106")
-  (SoftwareVersion "17.4-2022 S008-[10/29/22]")
+  (SoftwareVersion "17.4-2022 S008-[10/30/22]")
   (ProjectType "Analog or A/D Mixed Mode")
   (Folder "Design Resources"
     (Folder "Library")
@@ -24,35 +24,58 @@
          ".\lab1-pspicefiles\schematic1\lab1.sim"
         (DisplayName "SCHEMATIC1-lab1")
         (Type "PSpice Profile")))
-    (Folder "Model Libraries")
-    (Folder "Stimulus Files")
-    (Folder "Include Files"))
+    (Folder "Model Libraries"
+      (Sort User)
+      (File ".\lab1-PSpiceFiles\PSpiceModelApps\PSpiceModelApps_Include.lib"
+        (Type "PSpiceLibrary")
+        (DisplayName
+           ".\lab1-PSpiceFiles\PSpiceModelApps\PSpiceModelApps_Include.lib")))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (Folder "Logs")
   (PartMRUSelector
     (0
       (LibraryName "C:\CADENCE\PSPICETI\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
       (DeviceIndex "0"))
-    (Dbreak
-      (FullPartName "Dbreak.Normal")
+    (Zener_P
+      (FullPartName "Zener_P.Normal")
       (LibraryName
          "C:\CADENCE\PSPICETI\TOOLS\CAPTURE\LIBRARY\PSPICE\BREAKOUT.OLB")
       (DeviceIndex "0"))
-    (VDC
-      (FullPartName "VDC.Normal")
+    (C
+      (FullPartName "C.Normal")
       (LibraryName
-         "C:\CADENCE\PSPICETI\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+         "C:\CADENCE\PSPICETI\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
       (DeviceIndex "0"))
     (R
       (FullPartName "R.Normal")
       (LibraryName
          "C:\CADENCE\PSPICETI\TOOLS\CAPTURE\LIBRARY\PSPICE\ANALOG.OLB")
+      (DeviceIndex "0"))
+    (Dbreak
+      (FullPartName "Dbreak.Normal")
+      (LibraryName
+         "C:\CADENCE\PSPICETI\TOOLS\CAPTURE\LIBRARY\PSPICE\BREAKOUT.OLB")
+      (DeviceIndex "0"))
+    (ST
+      (FullPartName "ST.Normal")
+      (LibraryName
+         "C:\CADENCE\PSPICETI\TOOLS\CAPTURE\TCLSCRIPTS\CAPPSPICEMODELAPP\TRANSFORMER\HYBRID\SUPPORTFILES\TRANSFORMER.OLB")
+      (DeviceIndex "0"))
+    (VDC
+      (FullPartName "VDC.Normal")
+      (LibraryName
+         "C:\CADENCE\PSPICETI\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
       (DeviceIndex "0")))
   (MPSSessionName "minhl")
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Outputs"))
+      (Path "Outputs")
+      (Select "Design Resources"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
@@ -62,9 +85,9 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 5 24 5 1332 24 631")
-        (Scroll "659 636")
-        (Zoom "246")
+        (Placement "44 0 1 -1 -1 5 24 5 1163 24 631")
+        (Scroll "0 168")
+        (Zoom "133")
         (Occurrence "/"))
       (Path "D:\MDDT\LAB2\LAB1.DSN")
       (Schematic "SCHEMATIC1")

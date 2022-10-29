@@ -1,5 +1,11 @@
 * source LAB1
-R_R1         0 N01902  1k TC=0,0 
-V_V3         N01895 0  AC 1
-+SIN 0 22 50 0 0 0
-D_D1         N01895 N01902 Dbreak 
+V_V3         N02403 0  AC 1
++SIN 0 220 50 0 0 0
+X1_TX1         N02403 0  N02309 N02317 ST_Model
+D_D1         0 N02309 Dbreak 
+D_D2         0 N02317 Dbreak 
+D_D3         N02309 N02305 Dbreak 
+D_D4         N02317 N02305 Dbreak 
+R_R1         0 N02305  1k TC=0,0 
+C_C1         0 N02305  680uF  TC=0,0 
+X_D5         0 N02305 Zener_parameterized PARAMS: VZT=20 RSF=100m

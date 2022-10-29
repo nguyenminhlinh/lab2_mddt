@@ -1,5 +1,5 @@
 
-**** 10/29/22 22:59:31 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+**** 10/29/22 23:21:03 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
 
  ** Profile: "SCHEMATIC1-lab1"  [ D:\MDDT\LAB2\lab1-pspicefiles\schematic1\lab1.sim ] 
 
@@ -24,7 +24,6 @@
 .lib "nom.lib" 
 
 *Analysis directives: 
-.TRAN  0 200ms 0 0.2ms 
 .OPTIONS ADVCONV
 .OPTIONS FILEMODELSEARCH
 .PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
@@ -34,24 +33,20 @@
 
 **** INCLUDING SCHEMATIC1.net ****
 * source LAB1
-R_R1         N02162 N02158  1k TC=0,0 
-V_V3         N02270 0  AC 1
-+SIN 0 220 50 0 0 0
-D_D1         0 N02158 Dbreak 
-X1_TX1         N02270 0  N02170 0 ST_Model
-D_D2         N02170 N02158 Dbreak 
-D_D3         N02162 0 Dbreak 
-D_D4         N02162 N02170 Dbreak 
+V_V1         N02574 0 8Vdc
+R_RL         0 N02581  1.5k TC=0,0 
+R_RS         N02574 N02581  200 TC=0,0 
+X_D2         0 N02581 Zener_parameterized PARAMS: VZT=5 RSF=100m
 
 **** RESUMING lab1.cir ****
 .END
 
-**** 10/29/22 22:59:31 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+**** 10/29/22 23:21:03 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
 
  ** Profile: "SCHEMATIC1-lab1"  [ D:\MDDT\LAB2\lab1-pspicefiles\schematic1\lab1.sim ] 
 
 
- ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
 
 
 ******************************************************************************
@@ -61,11 +56,9 @@ D_D4         N02162 N02170 Dbreak
  NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
 
 
-(N02158) 257.4E-21 (N02162) 257.4E-21 (N02170)    0.0000 (N02270)    0.0000     
+(N02574)    8.0000 (N02581)    4.9931 (X_D2.1)     .4883 (X_D2.3)    4.5047     
 
-(X1_TX1.PI)    0.0000                 (X1_TX1.SI)    0.0000                     
-
-(X1_TX1.SI1)    0.0000                
+(X_D2.9) 31.89E-06 
 
 
 
@@ -73,15 +66,15 @@ D_D4         N02162 N02170 Dbreak
     VOLTAGE SOURCE CURRENTS
     NAME         CURRENT
 
-    V_V3         0.000E+00
+    V_V1        -1.503E-02
 
-    TOTAL POWER DISSIPATION   0.00E+00  WATTS
+    TOTAL POWER DISSIPATION   1.20E-01  WATTS
 
 
 
           JOB CONCLUDED
 
-**** 10/29/22 22:59:31 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+**** 10/29/22 23:21:03 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
 
  ** Profile: "SCHEMATIC1-lab1"  [ D:\MDDT\LAB2\lab1-pspicefiles\schematic1\lab1.sim ] 
 
@@ -93,6 +86,6 @@ D_D4         N02162 N02170 Dbreak
 
 
 
-  License check-out time            =        3.47
-  Total job time (using Solver 1)   =         .47
+  License check-out time            =        4.42
+  Total job time (using Solver 1)   =         .22
 

@@ -1,5 +1,5 @@
 
-**** 10/29/22 21:13:43 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+**** 10/29/22 23:19:09 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
 
  ** Profile: "SCHEMATIC1-lab1"  [ D:\MDDT\LAB2\lab1-pspicefiles\schematic1\lab1.sim ] 
 
@@ -18,12 +18,12 @@
 *Libraries: 
 * Profile Libraries :
 * Local Libraries :
+.LIB "../../../lab1-PSpiceFiles/PSpiceModelApps/PSpiceModelApps_Include.lib" 
 * From [PSPICE NETLIST] section of C:\cds_spb_home\cdssetup\OrCAD_PSpiceTIPSpice_Install\17.4.0\PSpice.ini file:
 .lib "nom_pspti.lib" 
 .lib "nom.lib" 
 
 *Analysis directives: 
-.TRAN  0 100ms 0 0.1ms 
 .OPTIONS ADVCONV
 .OPTIONS FILEMODELSEARCH
 .PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
@@ -33,17 +33,17 @@
 
 **** INCLUDING SCHEMATIC1.net ****
 * source LAB1
-R_R1         N01909 N01902  1k TC=0,0 
-V_V3         N01895 N01909  AC 1
-+SIN 0 22 50 0 0 0
-D_D1         N01895 N01902 Dbreak 
+V_V1         N02574 N02599 8Vdc
+R_RL         N02599 N02581  1.5k TC=0,0 
+R_RS         N02574 N02581  200 TC=0,0 
+D_D1         N02599 N02581 Dbreak 
 
 **** RESUMING lab1.cir ****
 .END
 
-ERROR(ORPSIM-15142): Node N01909 is floating
+ERROR(ORPSIM-15142): Node N02574 is floating
 
-ERROR(ORPSIM-15142): Node N01902 is floating
+ERROR(ORPSIM-15142): Node N02599 is floating
 
-ERROR(ORPSIM-15142): Node N01895 is floating
+ERROR(ORPSIM-15142): Node N02581 is floating
 

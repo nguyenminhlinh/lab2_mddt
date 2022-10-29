@@ -12,7 +12,6 @@
 .lib "nom.lib" 
 
 *Analysis directives: 
-.TRAN  0 200ms 0 0.2ms 
 .OPTIONS ADVCONV
 .OPTIONS FILEMODELSEARCH
 .PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 

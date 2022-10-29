@@ -1,5 +1,5 @@
 
-**** 10/29/22 15:32:46 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+**** 10/29/22 16:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
 
  ** Profile: "SCHEMATIC1-lab1"  [ D:\MDDT\LAB2\lab1-PSpiceFiles\SCHEMATIC1\lab1.sim ] 
 
@@ -32,16 +32,17 @@
 
 **** INCLUDING SCHEMATIC1.net ****
 * source LAB1
-R_R1         0 N00351  1k TC=0,0 
-V_V1         N00336 0 10Vdc
-D_D1         N00336 N00343 Dbreak 
-D_D2         N00343 N00347 Dbreak 
-D_D3         N00347 N00351 Dbreak 
+R_R1         N00526 N00521  2k TC=0,0 
+V_V1         N00521 0 12Vdc
+D_D1         N00526 N00564 Dbreak 
+R_R2         0 N00526  8k TC=0,0 
+R_R3         N00564 N00521  4k TC=0,0 
+R_R4         0 N00564  6k TC=0,0 
 
 **** RESUMING lab1.cir ****
 .END
 
-**** 10/29/22 15:32:46 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+**** 10/29/22 16:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
 
  ** Profile: "SCHEMATIC1-lab1"  [ D:\MDDT\LAB2\lab1-PSpiceFiles\SCHEMATIC1\lab1.sim ] 
 
@@ -56,7 +57,7 @@ D_D3         N00347 N00351 Dbreak
  NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
 
 
-(N00336)   10.0000 (N00343)    9.2907 (N00347)    8.5815 (N00351)    7.8722 
+(N00521)   12.0000 (N00526)    8.8936 (N00564)    8.2596 
 
 
 
@@ -64,15 +65,15 @@ D_D3         N00347 N00351 Dbreak
     VOLTAGE SOURCE CURRENTS
     NAME         CURRENT
 
-    V_V1        -7.872E-03
+    V_V1        -2.488E-03
 
-    TOTAL POWER DISSIPATION   7.87E-02  WATTS
+    TOTAL POWER DISSIPATION   2.99E-02  WATTS
 
 
 
           JOB CONCLUDED
 
-**** 10/29/22 15:32:46 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+**** 10/29/22 16:10:30 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
 
  ** Profile: "SCHEMATIC1-lab1"  [ D:\MDDT\LAB2\lab1-PSpiceFiles\SCHEMATIC1\lab1.sim ] 
 
@@ -84,6 +85,6 @@ D_D3         N00347 N00351 Dbreak
 
 
 
-  License check-out time            =       22.24
+  License check-out time            =       22.75
   Total job time (using Solver 1)   =         .22
 

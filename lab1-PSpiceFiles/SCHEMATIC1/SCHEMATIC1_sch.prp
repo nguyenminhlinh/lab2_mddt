@@ -11,8 +11,12 @@
             ("level"	"0")
             ("model_params"
                 ("VALUE"
-                    ("value"	"220")
+                    ("value"	"1k")
                     ("pspice_param"	"VALUE")
+                )
+                ("BiasValue Power"
+                    ("value"	"82.73mW")
+                    ("pspice_param"	"BiasValue Power")
                 )
                 ("DIST"
                     ("value"	"FLAT")
@@ -58,8 +62,12 @@
             ("level"	"0")
             ("model_params"
                 ("DC"
-                    ("value"	"5Vdc")
+                    ("value"	"10Vdc")
                     ("pspice_param"	"DC")
+                )
+                ("BiasValue Power"
+                    ("value"	"-96.96mW")
+                    ("pspice_param"	"BiasValue Power")
                 )
                 ("PSpice Model Type"
                     ("value"	"0011")
@@ -72,6 +80,40 @@
             ("pspice_path"	"D_D1")
             ("level"	"0")
             ("model_params"
+                ("BiasValue Power"
+                    ("value"	"14.23mW")
+                    ("pspice_param"	"BiasValue Power")
+                )
+                ("AREA"
+                    ("value"	"")
+                    ("pspice_param"	"AREA")
+                )
+            )
+        )
+        ("D2"
+            ("device_name"	"Dbreak")
+            ("pspice_path"	"D_D2")
+            ("level"	"0")
+            ("model_params"
+                ("BiasValue Power"
+                    ("value"	"14.23mW")
+                    ("pspice_param"	"BiasValue Power")
+                )
+                ("AREA"
+                    ("value"	"")
+                    ("pspice_param"	"AREA")
+                )
+            )
+        )
+        ("D3"
+            ("device_name"	"Dbreak")
+            ("pspice_path"	"D_D3")
+            ("level"	"0")
+            ("model_params"
+                ("BiasValue Power"
+                    ("value"	"14.23mW")
+                    ("pspice_param"	"BiasValue Power")
+                )
                 ("AREA"
                     ("value"	"")
                     ("pspice_param"	"AREA")

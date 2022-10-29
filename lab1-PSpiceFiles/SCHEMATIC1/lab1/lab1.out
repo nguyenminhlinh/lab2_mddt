@@ -1,5 +1,5 @@
-
-**** 10/29/22 15:24:12 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+
+**** 10/29/22 15:32:46 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
 
  ** Profile: "SCHEMATIC1-lab1"  [ D:\MDDT\LAB2\lab1-PSpiceFiles\SCHEMATIC1\lab1.sim ] 
 
@@ -32,22 +32,16 @@
 
 **** INCLUDING SCHEMATIC1.net ****
 * source LAB1
-R_R1         N00124 N00131  220 TC=0,0 
-V_V1         N00124 0 5Vdc
-D_D1         N00131 0 Dbreak 
+R_R1         0 N00351  1k TC=0,0 
+V_V1         N00336 0 10Vdc
+D_D1         N00336 N00343 Dbreak 
+D_D2         N00343 N00347 Dbreak 
+D_D3         N00347 N00351 Dbreak 
 
 **** RESUMING lab1.cir ****
 .END
-
-WARNING(ORPSIM-15223): Library file C:\cds_spb_home\cdssetup\pspTILibDir\nom_pspti.lib has changed since index file nom_pspti.ind was created.
-
-WARNING(ORPSIM-15227): The timestamp changed from Thu Oct  6 23:04:21 2022 to Sat Oct 29 15:15:37 2022.
-
-INFO(ORPSIM-15422): Making new index file nom_pspti.ind for library file nom_pspti.lib.
-
-Index has 108144 entries from 5081 file(s).
 
-**** 10/29/22 15:24:12 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+**** 10/29/22 15:32:46 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
 
  ** Profile: "SCHEMATIC1-lab1"  [ D:\MDDT\LAB2\lab1-PSpiceFiles\SCHEMATIC1\lab1.sim ] 
 
@@ -62,7 +56,7 @@ Index has 108144 entries from 5081 file(s).
  NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
 
 
-(N00124)    5.0000 (N00131)     .7337 
+(N00336)   10.0000 (N00343)    9.2907 (N00347)    8.5815 (N00351)    7.8722 
 
 
 
@@ -70,15 +64,15 @@ Index has 108144 entries from 5081 file(s).
     VOLTAGE SOURCE CURRENTS
     NAME         CURRENT
 
-    V_V1        -1.939E-02
+    V_V1        -7.872E-03
 
-    TOTAL POWER DISSIPATION   9.70E-02  WATTS
+    TOTAL POWER DISSIPATION   7.87E-02  WATTS
 
 
 
           JOB CONCLUDED
 
-**** 10/29/22 15:24:12 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
+**** 10/29/22 15:32:46 ******* PSpice 17.4.0 (Nov 2018) ******* ID# 0 ********
 
  ** Profile: "SCHEMATIC1-lab1"  [ D:\MDDT\LAB2\lab1-PSpiceFiles\SCHEMATIC1\lab1.sim ] 
 
@@ -90,5 +84,6 @@ Index has 108144 entries from 5081 file(s).
 
 
 
-  Total job time (using Solver 1)   =       22.20
+  License check-out time            =       22.24
+  Total job time (using Solver 1)   =         .22
 

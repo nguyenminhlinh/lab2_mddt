@@ -3,6 +3,7 @@
         ("R")
         ("VSIN")
         ("Dbreak")
+        ("ST")
     )
     ("instances"
         ("R1"
@@ -65,21 +66,21 @@
                     ("value"	"1")
                     ("pspice_param"	"AC")
                 )
-                ("BiasValue Power"
-                    ("value"	"0W")
-                    ("pspice_param"	"BiasValue Power")
-                )
-                ("VAMPL"
-                    ("value"	"22")
-                    ("pspice_param"	"VAMPL")
+                ("FREQ"
+                    ("value"	"50")
+                    ("pspice_param"	"FREQ")
                 )
                 ("VOFF"
                     ("value"	"0")
                     ("pspice_param"	"VOFF")
                 )
-                ("FREQ"
-                    ("value"	"50")
-                    ("pspice_param"	"FREQ")
+                ("VAMPL"
+                    ("value"	"220")
+                    ("pspice_param"	"VAMPL")
+                )
+                ("BiasValue Power"
+                    ("value"	"0W")
+                    ("pspice_param"	"BiasValue Power")
                 )
                 ("PSpice Model Type"
                     ("value"	"0011")
@@ -106,6 +107,70 @@
         ("D1"
             ("device_name"	"Dbreak")
             ("pspice_path"	"D_D1")
+            ("level"	"0")
+            ("model_params"
+                ("BiasValue Power"
+                    ("value"	"0W")
+                    ("pspice_param"	"BiasValue Power")
+                )
+                ("AREA"
+                    ("value"	"")
+                    ("pspice_param"	"AREA")
+                )
+            )
+        )
+        ("TX1"
+            ("device_name"	"ST")
+            ("pspice_path"	"X1_TX1")
+            ("level"	"0")
+            ("model_params"
+                ("BiasValue Power"
+                    ("value"	"0W")
+                    ("pspice_param"	"BiasValue Power")
+                )
+                ("AppProp"
+                    ("value"	"modelname=ST_Model,LP1=1m,RP1=10m,Rs1=10m,N=0.1,LI=100n")
+                    ("pspice_param"	"AppProp")
+                )
+                ("PSpiceModelingAppType"
+                    ("value"	"Transformer")
+                    ("pspice_param"	"PSpiceModelingAppType")
+                )
+            )
+        )
+        ("D2"
+            ("device_name"	"Dbreak")
+            ("pspice_path"	"D_D2")
+            ("level"	"0")
+            ("model_params"
+                ("BiasValue Power"
+                    ("value"	"0W")
+                    ("pspice_param"	"BiasValue Power")
+                )
+                ("AREA"
+                    ("value"	"")
+                    ("pspice_param"	"AREA")
+                )
+            )
+        )
+        ("D3"
+            ("device_name"	"Dbreak")
+            ("pspice_path"	"D_D3")
+            ("level"	"0")
+            ("model_params"
+                ("BiasValue Power"
+                    ("value"	"0W")
+                    ("pspice_param"	"BiasValue Power")
+                )
+                ("AREA"
+                    ("value"	"")
+                    ("pspice_param"	"AREA")
+                )
+            )
+        )
+        ("D4"
+            ("device_name"	"Dbreak")
+            ("pspice_path"	"D_D4")
             ("level"	"0")
             ("model_params"
                 ("BiasValue Power"

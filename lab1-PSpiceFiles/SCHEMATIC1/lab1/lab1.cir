@@ -6,12 +6,13 @@
 *Libraries: 
 * Profile Libraries :
 * Local Libraries :
+.LIB "../../../lab1-PSpiceFiles/PSpiceModelApps/PSpiceModelApps_Include.lib" 
 * From [PSPICE NETLIST] section of C:\cds_spb_home\cdssetup\OrCAD_PSpiceTIPSpice_Install\17.4.0\PSpice.ini file:
 .lib "nom_pspti.lib" 
 .lib "nom.lib" 
 
 *Analysis directives: 
-.TRAN  0 100ms 0 0.1ms 
+.TRAN  0 200ms 0 0.2ms 
 .OPTIONS ADVCONV
 .OPTIONS FILEMODELSEARCH
 .PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 

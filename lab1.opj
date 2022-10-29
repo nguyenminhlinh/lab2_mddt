@@ -24,9 +24,14 @@
          ".\lab1-pspicefiles\schematic1\lab1.sim"
         (DisplayName "SCHEMATIC1-lab1")
         (Type "PSpice Profile")))
-    (Folder "Model Libraries")
     (Folder "Stimulus Files")
-    (Folder "Include Files"))
+    (Folder "Include Files")
+    (Folder "Model Libraries"
+      (File ".\lab1-PSpiceFiles\PSpiceModelApps\PSpiceModelApps_Include.lib"
+        (DisplayName
+           ".\lab1-PSpiceFiles\PSpiceModelApps\PSpiceModelApps_Include.lib")
+        (Type "PSpiceLibrary"))
+      (Sort User)))
   (DefaultLibraryBrowseDirectory "library\PSpice")
   (Folder "Logs")
   (PartMRUSelector

@@ -1,5 +1,9 @@
 * source LAB1
-R_R1         0 N01902  1k TC=0,0 
-V_V3         N01895 0  AC 1
-+SIN 0 22 50 0 0 0
-D_D1         N01895 N01902 Dbreak 
+R_R1         N02162 N02158  1k TC=0,0 
+V_V3         N02270 0  AC 1
++SIN 0 220 50 0 0 0
+D_D1         0 N02158 Dbreak 
+X1_TX1         N02270 0  N02170 0 ST_Model
+D_D2         N02170 N02158 Dbreak 
+D_D3         N02162 0 Dbreak 
+D_D4         N02162 N02170 Dbreak 
